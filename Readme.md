@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Александр Белоушкин](https://up.htmlacademy.ru/htmlcss/22/user/235747).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Поданев](https://htmlacademy.ru/profile/mpodanev).
 
 ---
 
