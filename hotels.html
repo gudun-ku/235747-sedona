@@ -12,15 +12,164 @@
       </p>
       <nav class="nav-main">
         <ul class="nav-links">
-          <li class="nav-link">Информация</li>
+          <li class="nav-link"><a href="index.html">Информация</a></li>
           <li class="nav-link"><a href="#gallery">Фото и видео</a></li>
           <li class="nav-link"><a href="#info">Карта штата</a></li>
-          <li class="nav-link"><a href="hotels.html">Гостиницы</a></li>
+          <li class="nav-link">Гостиницы</li>
         </ul>
       </nav>
     </header>
 
     <main class="container">
+
+      <section class="hotels-filter-form">
+        <h2 class="vis-hidden">Поиск гостиницы</h2>
+        <!-- Здесь будет форма фильтра/поиска гостиниц -->
+      </section>
+      <section class="hotels">        
+        <h2 class="vis-hidden">Результаты поиска</h2>
+        <h3><b>Найдено: </b><span class="search-results-count">3</span></h3>
+        <p class="search-results-sort-header">Сортировка:</p>
+        <ul class="search-results-sort-type">
+          <li><a class="button">По цене</a></li>
+          <li><a class="button">По типу</a></li>
+          <li><a class="button">По рейтингу</a></li>
+        </ul>
+        <ul class="search-results-sort-order">
+          <li><a class="button button-sort-asc">От меньшего к большему</a></li>
+          <li><a class="button button-sort-desc">От большего к меньшему</a></li>          
+        </ul>
+        <table class="hotels-search-results">
+          <tr class="vis-hidden">
+            <th>Фото</th>              
+            <th>Наименование</th>
+            <th>Категория</th>
+            <th>Цена</th>
+            <th></th>
+            <th>Звезд</th>
+            <th>Рейтинг</th>              
+          </tr>
+
+          <tr>
+            <td>
+              <p class="hotel-photo">
+                <img src="/img/hotels/1.png" width="200" height="160" alt="AMARA RESORT & SPA">
+              </p>
+            </td>
+            <td>
+              <h3 class="hotel-name">
+                AMARA RESORT & SPA
+              </h3>
+            </td>
+            <td>
+              <p class="hotel-category">
+                Гостиница
+              </p>
+            </td>
+            <td>
+              <p class="hotel-price">
+                От 4000 Р.
+              </p>
+            </td>
+            <td>
+              <p class="hotel-actions">
+                <a class="button" href="hotel.html">Подробнее</a>
+                <a class="button" href="#">Забронировать</a>
+              </p>
+            </td>
+            <td>
+              <p class="hotel-stars">
+               <span class="hotel-stars">4</span>
+              </p>
+            </td>
+            <td>
+              <p class="hotel-rating">
+                8,5
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p class="hotel-photo">
+                <img src="/img/hotels/2.png" width="200" height="160" alt="DESERT QUAL INN">
+              </p>
+            </td>
+            <td>
+              <h3 class="hotel-name">
+                DESERT QUAL INN
+              </h3>
+            </td>
+            <td>
+              <p class="hotel-category">
+                Мотель
+              </p>
+            </td>
+            <td>
+              <p class="hotel-price">
+                От 3000 Р.
+              </p>
+            </td>
+            <td>
+              <p class="hotel-actions">
+                <a class="button" href="hotel.html">Подробнее</a>
+                <a class="button" href="#">Забронировать</a>
+              </p>
+            </td>
+            <td>
+              <p class="hotel-stars">
+                <span class="hotel-stars">3</span>
+              </p>
+            </td>
+            <td>
+              <p class="hotel-rating">
+                8,9
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p class="hotel-photo">
+                <img src="/img/hotels/3.png" width="200" height="160" alt="VILLAS AT POCO DIABLO">
+              </p>
+            </td>
+            <td>
+              <h3 class="hotel-name">
+                VILLAS AT POCO DIABLO
+              </h3>
+            </td>
+            <td>
+              <p class="hotel-category">
+                Мотель
+              </p>
+            </td>
+            <td>
+              <p class="hotel-price">
+                От 2000 Р.
+              </p>
+            </td>
+            <td>
+              <p class="hotel-actions">
+                <a class="button" href="hotel.html">Подробнее</a>
+                <a class="button" href="#">Забронировать</a>
+              </p>
+            </td>
+            <td>
+              <p class="hotel-stars">
+                <span class="hotel-stars">2</span>
+              </p>
+            </td>
+            <td>
+              <p class="hotel-rating">
+                9,2
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+      </section>
      
     </main>
 
@@ -44,11 +193,5 @@
       </div>        
     </footer>
 
-    <!-- Модальная форма  -->
-    <section class="modal modal-hotel-search">
-      <h2 class="vis-hidden">Поиск гостиницы в Седоне</h2>       
-      <!-- Здесь будет форма -->        
-    </section>
-    
   </body>
 </html>
