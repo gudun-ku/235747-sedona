@@ -23,9 +23,74 @@
     <main class="container">
 
       <section class="hotels-filter-form">
-        <h2 class="vis-hidden">Поиск гостиницы</h2>
-        <!-- Здесь будет форма фильтра/поиска гостиниц -->
+        <h2 class="vis-hidden">Поиск гостиницы</h2>        
+        <form class="hotelfilter" action="https://echo.htmlacademy.ru/" method="GET">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul class="filter-infrastructure">
+              <li>
+                <label>
+                  Бассейн
+                  <input type="checkbox" id="cbpool" name="pool" checked>
+                </label> 
+              </li>
+              <li>
+                <label>
+                  Парковка
+                  <input type="checkbox" id="cbparking" name="parking">
+                </label> 
+              </li>
+              <li>
+                <label>
+                  Wi-Fi
+                  <input type="checkbox" id="cbwifi" name="wifi">
+                </label> 
+              </li>
+            </ul>               
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul class="filter-type">
+              <li>
+                <label>
+                  Гостиница
+                  <input type="checkbox" id="cbhotel" name="hotel" checked>
+                </label> 
+              </li>
+              <li>
+                <label>
+                  Мотель
+                  <input type="checkbox" id="cbmotel" name="motel" checked>
+                </label> 
+              </li>
+              <li>
+                <label>
+                  Апартаменты
+                  <input type="checkbox" id="cbapartments" name="apartments" checked>
+                </label> 
+              </li>
+            </ul>               
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (р):</legend>
+            <ul class="pricecontrols">
+              <li>
+                <label for="pricemin">От</label> 
+                <input type="range" id="rngpricemin" name="pricemin" min="0" max="4000" step="100" value="0">
+                <label class="pricemin">0</label>
+              </li>
+              <li>
+                <label for="pricemax">До</label> 
+                <input type="range" id="rngpricemax" name="pricemax" min="0" max="4000" step="100" value="3000">
+                <label class="pricemax">3000</label>
+              </li>
+            </ul>            
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </form>
+        
       </section>
+
       <section class="hotels">        
         <h2 class="vis-hidden">Результаты поиска</h2>
 

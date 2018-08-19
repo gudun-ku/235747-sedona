@@ -187,9 +187,9 @@
       </p>        
       <div class="footer-social">     
         <ul>
-            <li><a class="social-button" href="#">Твиттер</a></li>
-            <li><a class="social-button" href="#">Фейсбук</a></li>
-            <li><a class="social-button" href="#">Ютуб</a></li>
+            <li><a class="social-button" href="#" aria-label="Твиттер">Твиттер</a></li>
+            <li><a class="social-button" href="#" aria-label="Фейсбук">Фейсбук</a></li>
+            <li><a class="social-button" href="#" aria-label="Ютуб">Ютуб</a></li>
         </ul>
       </div>
       <div class="footer-copyright">
@@ -204,8 +204,24 @@
 
     <!-- Модальная форма  -->
     <section class="modal modal-hotel-search">
-      <h2 class="vis-hidden">Поиск гостиницы в Седоне</h2>       
-      <!-- Здесь будет форма -->        
+      <h2 class="vis-hidden">Поиск гостиницы в Седоне</h2>          
+      <form class="hotelsearch" action="https://echo.htmlacademy.ru/" method="POST">
+        <p class="datearrival">
+          <label for="datearrival">Дата заезда:</label>    
+          <input type="text" id="datearrival" name="datearrival" placeholder="24 апреля 2017">
+        </p>
+        <p class="datearrival">
+          <label for="datedeparture">Дата выезда:</label>        
+          <input type="text" id="datedeparture" name="datedeparture" placeholder="4 июля 2017">
+        </p>
+        <p class="people">
+          <label for="adults">Взрослые:</label>     
+          <input type="text" id="adults" name="adults" placeholder="2"> 
+          <label for="children">Дети:</label>
+          <input type="text" id="children" name="children" placeholder="0"> 
+        </p>
+        <button class="button" type="submit">Найти</button>
+      </form>
     </section>
     
   </body>
