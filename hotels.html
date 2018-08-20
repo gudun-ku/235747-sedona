@@ -23,27 +23,27 @@
     <main class="container">
 
       <section class="hotels-filter-form">
-        <h2 class="vis-hidden">Поиск гостиницы</h2>        
-        <form class="hotelfilter" action="https://echo.htmlacademy.ru/" method="GET">
+        <h2 class="visually-hidden">Поиск гостиницы</h2>        
+        <form class="hotels-filter" action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul class="filter-infrastructure">
               <li>
                 <label>
                   Бассейн
-                  <input type="checkbox" id="cbpool" name="pool" checked>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" id="cbpool" name="pool" checked>
                 </label> 
               </li>
               <li>
                 <label>
                   Парковка
-                  <input type="checkbox" id="cbparking" name="parking">
+                  <input class="visually-hidden filter-checkbox" type="checkbox" id="cbparking" name="parking">
                 </label> 
               </li>
               <li>
                 <label>
                   Wi-Fi
-                  <input type="checkbox" id="cbwifi" name="wifi">
+                  <input class="visually-hidden filter-checkbox" type="checkbox" id="cbwifi" name="wifi">
                 </label> 
               </li>
             </ul>               
@@ -54,35 +54,33 @@
               <li>
                 <label>
                   Гостиница
-                  <input type="checkbox" id="cbhotel" name="hotel" checked>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" id="cbhotel" name="hotel" checked>
                 </label> 
               </li>
               <li>
                 <label>
                   Мотель
-                  <input type="checkbox" id="cbmotel" name="motel" checked>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" id="cbmotel" name="motel" checked>
                 </label> 
               </li>
               <li>
                 <label>
                   Апартаменты
-                  <input type="checkbox" id="cbapartments" name="apartments" checked>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" id="cbapartments" name="apartments" checked>
                 </label> 
               </li>
             </ul>               
           </fieldset>
           <fieldset>
             <legend>Стоимость в сутки (р):</legend>
-            <ul class="pricecontrols">
+            <ul class="filter-price">
               <li>
                 <label for="pricemin">От</label> 
-                <input type="range" id="rngpricemin" name="pricemin" min="0" max="4000" step="100" value="0">
-                <label class="pricemin">0</label>
+                <input class="visually-hidden filter-bound" type="text" id="pricemin" name="pricemin" value="0">                
               </li>
               <li>
                 <label for="pricemax">До</label> 
-                <input type="range" id="rngpricemax" name="pricemax" min="0" max="4000" step="100" value="3000">
-                <label class="pricemax">3000</label>
+                <input class="visually-hidden filter-bound" type="text" id="pricemax" name="pricemax" value="3000">                
               </li>
             </ul>            
           </fieldset>
@@ -92,7 +90,7 @@
       </section>
 
       <section class="hotels">        
-        <h2 class="vis-hidden">Результаты поиска</h2>
+        <h2 class="visually-hidden">Результаты поиска</h2>
 
         <div class="hotels-list-header">
 
@@ -100,14 +98,14 @@
           
           <p class="search-results-sort-header">Сортировка:</p>
           <ul class="search-results-sort-type">
-            <li><a class="button">По цене</a></li>
-            <li><a class="button">По типу</a></li>
-            <li><a class="button">По рейтингу</a></li>
+            <li><a class="button button-link" href="hotels.html?sort=price">По цене</a></li>
+            <li><a class="button button-link" href="hotels.html?sort=type">По типу</a></li>
+            <li><a class="button button-link" href="hotels.html?sort=rating">По рейтингу</a></li>
           </ul>
 
           <ul class="search-results-sort-order">
-            <li><a class="button button-sort-asc">От меньшего к большему</a></li>
-            <li><a class="button button-sort-desc">От большего к меньшему</a></li>          
+            <li><a class="button button-sort-asc" href="hotels.html?order=asc">От меньшего к большему</a></li>
+            <li><a class="button button-sort-desc" href="hotels.html?order=desc">От большего к меньшему</a></li>          
           </ul>
 
         </div>
@@ -116,7 +114,7 @@
 
           <li class="hotels-list-item">
 
-            <img src="img/hotels/hotel-1.jpg" width="135" height="90" alt="AMARA RESORT & SPA">
+            <img src="img/hotels/hotel-1.jpg" width="135" height="90" alt="изображение отеля AMARA RESORT & SPA">
             
             <div class="hotel-card">
           
@@ -151,7 +149,7 @@
 
           <li class="hotels-list-item">
             
-            <img src="img/hotels/hotel-2.jpg" width="135" height="90" alt="DESERT QUAL INN">
+            <img src="img/hotels/hotel-2.jpg" width="135" height="90" alt="изображение отеля DESERT QUAL INN">
             
             <div class="hotel-card">
           
@@ -186,7 +184,7 @@
 
           <li class="hotels-list-item">
 
-            <img src="img/hotels/hotel-3.jpg" width="135" height="90" alt="VILLAS AT POCO DIABLO">
+            <img src="img/hotels/hotel-3.jpg" width="135" height="90" alt="изображение отеля VILLAS AT POCO DIABLO">
             
             <div class="hotel-card">
           
@@ -231,9 +229,9 @@
       </p>        
       <div class="footer-social">     
         <ul>
-            <li><a class="social-button" href="#">Твиттер</a></li>
-            <li><a class="social-button" href="#">Фейсбук</a></li>
-            <li><a class="social-button" href="#">Ютуб</a></li>
+          <li><a class="social-button social-button-twitter" href="#" aria-label="Твиттер">Твиттер</a></li>
+          <li><a class="social-button social-button-facebook" href="#" aria-label="Фейсбук">Фейсбук</a></li>
+          <li><a class="social-button social-button-youtube" href="#" aria-label="Ютуб">Ютуб</a></li>
         </ul>
       </div>
       <div class="footer-copyright">
