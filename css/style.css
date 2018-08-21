@@ -1,0 +1,107 @@
+/*
+.vis-hidden {
+    visibility: hidden;
+}
+*/
+
+body {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;    
+    line-height: 26px;
+    font-weight: regular;
+    color: black;
+    text-transform: uppercase;
+    background-color: white;      
+}
+
+a {
+    text-decoration: none;
+}
+
+.list-default  {
+    list-style: none;
+}
+
+.button {
+    font: inherit;
+    font-weight: bold;
+    color: white;
+    background: crimson;
+    border: none;
+    text-transform: uppercase;    
+    padding: 5px;
+    margin: 5px;
+}
+
+.button-info {
+    background-color:#81b3d2;
+    color: white;
+}
+
+.button-info:hover,
+.button-info:focus {
+    background-color:#669ec0;
+    color: white;
+}
+
+.button-info:active {
+    background-color:#5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.button-action {
+    background-color:#766357;
+    color: white;
+}
+
+.button-action:hover,
+.button-action:focus {
+    background-color:#604e43;
+    color: white;
+}
+
+.button-action:active {
+    background-color:#503e33;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-main {
+    font-size: 14px;    
+    line-height: 26px;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-main a {
+    color: black;
+}
+
+.nav-main a:visited {
+    color: black;
+}
+
+.nav-main a:hover {
+    color: #81b3d2;
+}
+
+.nav-main a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.banner-main {
+    display: block;    
+    width: 1200px;
+    height: 800px;      
+    background-image:url("../img/welcome.svg"),
+                     url("../img/banner-mask.svg"),
+                     url("../img/banner-background.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 132px,left 50% bottom 216px, 50% 50%;
+    background-size: 459px 353px, 100%, 100%;
+}
+
+
