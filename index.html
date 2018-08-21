@@ -12,9 +12,9 @@
       </p>
       <nav class="nav-main">
         <ul class="nav-links">
-          <li class="nav-link">Информация</li>
+          <li class="nav-link"><a href="#info">Информация</a></li>
           <li class="nav-link"><a href="#gallery">Фото и видео</a></li>
-          <li class="nav-link"><a href="#info">Карта штата</a></li>
+          <li class="nav-link"><a href="#statemap">Карта штата</a></li>
           <li class="nav-link"><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
@@ -206,20 +206,30 @@
     <section class="modal modal-hotel-search">
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>          
       <form class="hotelsearch" action="https://echo.htmlacademy.ru/" method="POST">
-        <p class="datearrival">
+        <p class="dateinput">
           <label for="datearrival">Дата заезда:</label>    
           <input type="text" id="datearrival" name="datearrival" placeholder="24 апреля 2017">
+          <button class="icon-button dateselect-button" type="button" aria-label="Выбрать дату прибытия">Выбор</button>
         </p>
-        <p class="datearrival">
+        <p class="dateinput">
           <label for="datedeparture">Дата выезда:</label>        
           <input type="text" id="datedeparture" name="datedeparture" placeholder="4 июля 2017">
+          <button class="icon-button dateselect-button" type="button" aria-label="Выбрать дату отъезда">Выбор</button>
         </p>
-        <p class="people">
-          <label for="adults">Взрослые:</label>     
-          <input type="text" id="adults" name="adults" placeholder="2"> 
-          <label for="children">Дети:</label>
-          <input type="text" id="children" name="children" placeholder="0"> 
-        </p>
+        <div class="people">
+          <p class="quantinput" aria-label="Количество взрослых">
+            <label for="adults">Взрослые:</label>     
+            <input type="text" id="adults" name="adults" placeholder="2"> 
+            <button class="icon-button count-up-button" type="button">Увеличить</button>
+            <button class="icon-button count-down-button" type="button">Уменьшить</button>
+          </p>
+          <p class="quantinput" aria-label="Количество детей">
+            <label for="children">Дети:</label>
+            <input type="text" id="children" name="children" placeholder="0"> 
+            <button class="icon-button count-up-button" type="button">Увеличить</button>
+            <button class="icon-button count-down-button" type="button">Уменьшить</button>
+          </p>
+        </div>
         <button class="button" type="submit">Найти</button>
       </form>
     </section>
