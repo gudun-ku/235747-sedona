@@ -1,12 +1,6 @@
-/*
-.vis-hidden {
-    visibility: hidden;
-}
-*/
-
 body {
-    width: 1200px;
-    margin: auto;
+   
+    margin: 0;
     padding: 0;
 
     font-family: "PT Sans", Arial, sans-serif;
@@ -18,12 +12,26 @@ body {
     background-color: white;      
 }
 
-a {
+body {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {   
     text-decoration: none;
+}
+
+.visually-hidden {
+    visibility: hidden;
 }
 
 .list-default  {
     list-style: none;
+}
+
+.header-logo {
+    margin: 0;
 }
 
 .button {
@@ -95,13 +103,48 @@ a {
 .banner-main {
     display: block;    
     width: 1200px;
-    height: 800px;      
+    height: 557px;      
     background-image:url("../img/welcome.svg"),
                      url("../img/banner-mask.svg"),
                      url("../img/banner-background.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: 50% 132px,left 50% bottom 216px, 50% 50%;
-    background-size: 459px 353px, 100%, 100%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 50% 132px,left 50% bottom 0, left 50% top -40px;
+    background-size: 459px 353px, 1200px 57px, 1200px 800px;
 }
+
+.preferences-item-image {
+    width:800px;
+    height: 300px; 
+    background-size: 800px 400px;
+    background-position: 50% 50%;
+}
+
+.pref-image-town {
+    background-image: url("../img/sedona-town.jpg");
+}
+
+.pref-image-bridge {
+    background-image: url("../img/devl-bridge.jpg");
+}
+
+.info-item-icon {    
+    width: 76px;
+    height: 76px;
+    background-repeat: no-repeat;    
+}
+
+.icon-home {
+   background-image: url("../img/elements/icon-1.svg");
+}
+
+.icon-food {
+    background-image: url("../img/elements/icon-2.svg");
+ }
+
+.icon-souvenirs {
+    background-image: url("../img/elements/icon-3.svg");
+}
+
+
 
 
