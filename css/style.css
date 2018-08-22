@@ -108,8 +108,31 @@ a {
                      url("../img/banner-mask.svg"),
                      url("../img/banner-background.jpg");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 50% 132px,left 50% bottom 0, left 50% top -40px;
+    background-position: 50% 132px,left 50% bottom 0, left 50% top -30px;
     background-size: 459px 353px, 1200px 57px, 1200px 800px;
+}
+
+.page-title {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.preferences-title {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.preference-item-header,
+.info-item-header {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.visiting-header h2 {
+    font-size: 30px;
+    line-height: 36px;
 }
 
 .preferences-item-image {
@@ -145,6 +168,10 @@ a {
     background-image: url("../img/elements/icon-3.svg");
 }
 
+
+.footer-logo label {
+    
+}
 
 
 
