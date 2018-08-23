@@ -33,7 +33,7 @@
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul class="filter-infrastructure list-default">
-              <li>
+              <li>                
                 <label>
                   Бассейн
                   <input class="visually-hidden filter-checkbox" type="checkbox" id="cbpool" name="pool" checked>
@@ -109,8 +109,8 @@
           </ul>
 
           <ul class="search-results-sort-order list-default">
-            <li><a class="button button-sort-asc" href="hotels.html?order=asc">От меньшего к большему</a></li>
-            <li><a class="button button-sort-desc" href="hotels.html?order=desc">От большего к меньшему</a></li>          
+            <li><a class="button button-sort button-sort-asc" href="hotels.html?order=asc" aria-label="От меньшего к большему"></a></li>
+            <li><a class="button button-sort button-sort-desc" href="hotels.html?order=desc" aria-label="Oт большего к меньшему"></a></li>          
           </ul>
 
         </div>
@@ -234,15 +234,15 @@
       </p>        
       <div class="footer-social">     
         <ul class="list-default">
-          <li><a class="social-button social-button-twitter" href="#" aria-label="Твиттер">Твиттер</a></li>
-          <li><a class="social-button social-button-facebook" href="#" aria-label="Фейсбук">Фейсбук</a></li>
-          <li><a class="social-button social-button-youtube" href="#" aria-label="Ютуб">Ютуб</a></li>
+          <li class="social-button-twitter"><a class="social-button" href="#" aria-label="Твиттер"></a></li>
+          <li class="social-button-facebook"><a class="social-button" href="#" aria-label="Фейсбук"></a></li>
+          <li class="social-button-youtube"><a class="social-button" href="#" aria-label="Ютуб"></a></li>
         </ul>
       </div>
-      <div class="footer-copyright">
-        <b>Website by</b>
+      <div class="footer-copyright">       
         <p class="footer-logo">
-          <a href="https://htmlacademy.ru/intensive/htmlcss">            
+          <label>Website by</label> 
+          <a href="https://htmlacademy.ru/intensive/htmlcss">                       
             <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
           </a>          
         </p>
