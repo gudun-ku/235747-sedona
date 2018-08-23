@@ -168,10 +168,32 @@ a {
     background-image: url("../img/elements/icon-3.svg");
 }
 
+.map {    
+    width: 1200px;
+    height: 473px;
+    background-image: url("../img/map.jpg");
+    background-color: #F2F1EF;
+    background-size:  1200px 594px;   
+    background-position: 50% 0px;
 
-.footer-logo label {
-    
 }
 
+.footer-social li {
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;        
+    background-repeat: no-repeat;
+    background-position: 50% 50%;    
+}
 
+.social-button-twitter  {    
+    background-image: url("../img/elements/twitter.svg");         
+}
 
+.social-button-facebook  {    
+    background-image: url("../img/elements/facebook.svg");  
+}
+
+.social-button-youtube  {    
+    background-image: url("../img/elements/youtube.svg");     
+}
