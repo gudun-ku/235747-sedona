@@ -1,0 +1,328 @@
+body {   
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;    
+    line-height: 26px;
+    font-weight: 400;
+    color: black;
+    text-transform: uppercase;
+    background-color: white;      
+}
+
+a {   
+    text-decoration: none;
+}
+
+.visually-hidden {
+    visibility: hidden;
+}
+
+.list-default  {
+    list-style: none;
+}
+
+.header-logo {
+    margin: 0;
+}
+
+.button {
+    font: inherit;
+    font-weight: bold;
+    color: white;
+    background:transparent;
+    border: none;
+    text-transform: uppercase;    
+    outline: 0;
+    padding: 5px;
+    margin: 5px;
+}
+
+.button-link{    
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.button-link:hover,
+.button-link:focus {
+    color: #81b3d2;
+}
+
+.button-link:active {  
+    color: black;
+}
+
+.button-sort {
+    background-repeat: no-repeat;
+}
+
+.button-sort-asc{    
+    background-image: url("../img/elements/icon-up-dir.svg");
+}
+
+.button-sort-desc{    
+    background-image: url("../img/elements/icon-down-dir.svg");
+}
+
+
+.button-info {
+    background-color:#81b3d2;
+    color: white;
+}
+
+.button-info:hover,
+.button-info:focus {
+    background-color:#669ec0;
+    color: white;
+}
+
+.button-info:active {
+    background-color:#5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.button-action {
+    background-color:#766357;
+    color: white;
+}
+
+.button-action:hover,
+.button-action:focus {
+    background-color:#604e43;
+    color: white;
+}
+
+.button-action:active {
+    background-color:#503e33;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-main {
+    font-size: 14px;    
+    line-height: 26px;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-main a {
+    color: black;
+}
+
+.nav-main a:visited {
+    color: black;
+}
+
+.nav-main a:hover {
+    color: #81b3d2;
+}
+
+.nav-main a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.banner-main {
+    display: block;    
+    width: 1200px;
+    height: 557px;      
+    background-image:url("../img/welcome.svg"),
+                     url("../img/banner-mask.svg"),
+                     url("../img/banner-background.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 50% 132px,left 50% bottom 0, left 50% top -30px;
+    background-size: 459px 353px, 1200px 57px, 1200px 800px;
+}
+
+.page-title {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.preferences-title {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.preference-item-header,
+.info-item-header {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.visiting-header h2 {
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.preferences-item-image {
+    width:800px;
+    height: 300px; 
+    background-size: 800px 400px;
+    background-position: 50% 50%;
+}
+
+.pref-image-town {
+    background-image: url("../img/sedona-town.jpg");
+}
+
+.pref-image-bridge {
+    background-image: url("../img/devl-bridge.jpg");
+}
+
+.info-item-icon {    
+    width: 76px;
+    height: 76px;
+    background-repeat: no-repeat;    
+}
+
+.icon-home {
+   background-image: url("../img/elements/icon-1.svg");
+}
+
+.icon-food {
+    background-image: url("../img/elements/icon-2.svg");
+ }
+
+.icon-souvenirs {
+    background-image: url("../img/elements/icon-3.svg");
+}
+
+.map {    
+    width: 1200px;
+    height: 473px;
+    background-image: url("../img/map.jpg");
+    background-color: #F2F1EF;
+    background-size:  1200px 594px;   
+    background-position: 50% 0px;
+}
+
+.footer-tag {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.footer-social li {
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;        
+    background-repeat: no-repeat;
+    background-position: 50% 50%;    
+}
+
+.footer-social li:hover,
+.footer-social li:focus {
+    background-color:#669ec0;   
+}
+
+.footer-social li:active {
+    background-color:#5496bd;      
+}
+
+.social-button-twitter  {    
+    background-image: url("../img/elements/twitter.svg");         
+}
+
+.social-button-facebook {    
+    background-image: url("../img/elements/facebook.svg");  
+}
+
+.social-button-youtube  {    
+    background-image: url("../img/elements/youtube.svg");     
+}
+
+.hotel-search-title {    
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    color:white;
+    background-color: #766357;
+}
+
+.hotel-search-title:hover,
+.hotel-search-title:focus {
+    background-color:#604e43;
+    color: white;
+}
+
+.hotel-search-title:active {
+    background-color:#503e33;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.hotelsearch label {
+    font-size:14px;
+    font-weight: bold;
+}
+
+.hotelsearch input {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:black;
+    background-color: #f2f2f2;
+}
+
+.hotelsearch input:hover {   
+    background-color: #ebebeb;
+}
+
+.hotelsearch input:focus {   
+    background-color: white;
+}
+
+.hotels-filter-form {
+    background-color:#8EB3D0;
+    background-image: url("../img/hotels/filter-background.jpg");  
+    background-repeat: no-repeat;  
+    background-size:  1200px 800px;   
+    background-position: 50% 50%;
+}
+
+.hotels-filter-form legend {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.hotels-filter-form label {
+    font-size: 14px;
+    color: white;
+    margin-left: 30px;
+}
+
+.filter-infrastructure li  {
+    background-image: url("../img/elements/checkbox-off.svg");  
+    background-repeat: no-repeat;  
+}
+
+.filter-type li  {
+    background-image: url("../img/elements/checkbox-on.svg");  
+    background-repeat: no-repeat;  
+}
+
+.hotels-list-header h3 {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    color: black;
+}
+
+.hotel-name {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    color: black;
+}
+
+.hotel-name:hover,
+.hotel-name:focus{  
+    color: #81b3d2;
+}
+
+.hotel-name:active{  
+    color: rgba(0, 0, 0, 0.3);
+}
+

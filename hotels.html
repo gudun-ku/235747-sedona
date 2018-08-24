@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -13,7 +16,7 @@
         </a>
       </p>
       <nav class="nav-main">
-        <ul class="nav-links">
+        <ul class="nav-links list-default">
           <li class="nav-link"><a href="#info">Информация</a></li>
           <li class="nav-link"><a href="#gallery">Фото и видео</a></li>
           <li class="nav-link"><a href="#statemap">Карта штата</a></li>
@@ -29,8 +32,8 @@
         <form class="hotels-filter" action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset>
             <legend>Инфраструктура:</legend>
-            <ul class="filter-infrastructure">
-              <li>
+            <ul class="filter-infrastructure list-default">
+              <li>                
                 <label>
                   Бассейн
                   <input class="visually-hidden filter-checkbox" type="checkbox" id="cbpool" name="pool" checked>
@@ -52,7 +55,7 @@
           </fieldset>
           <fieldset>
             <legend>Тип жилья:</legend>
-            <ul class="filter-type">
+            <ul class="filter-type list-default">
               <li>
                 <label>
                   Гостиница
@@ -75,7 +78,7 @@
           </fieldset>
           <fieldset>
             <legend>Стоимость в сутки (р):</legend>
-            <ul class="filter-price">
+            <ul class="filter-price list-default">
               <li>
                 <label for="pricemin">От</label> 
                 <input class="visually-hidden filter-bound" type="text" id="pricemin" name="pricemin" value="0">                
@@ -99,20 +102,20 @@
           <h3><b>Найдено: </b><span class="search-results-count">3</span></h3>
           
           <p class="search-results-sort-header">Сортировка:</p>
-          <ul class="search-results-sort-type">
+          <ul class="search-results-sort-type list-default">
             <li><a class="button button-link" href="hotels.html?sort=price">По цене</a></li>
             <li><a class="button button-link" href="hotels.html?sort=type">По типу</a></li>
             <li><a class="button button-link" href="hotels.html?sort=rating">По рейтингу</a></li>
           </ul>
 
-          <ul class="search-results-sort-order">
-            <li><a class="button button-sort-asc" href="hotels.html?order=asc">От меньшего к большему</a></li>
-            <li><a class="button button-sort-desc" href="hotels.html?order=desc">От большего к меньшему</a></li>          
+          <ul class="search-results-sort-order list-default">
+            <li><a class="button button-sort button-sort-asc" href="hotels.html?order=asc" aria-label="От меньшего к большему"></a></li>
+            <li><a class="button button-sort button-sort-desc" href="hotels.html?order=desc" aria-label="Oт большего к меньшему"></a></li>          
           </ul>
 
         </div>
 
-        <ul class="hotels-list">
+        <ul class="hotels-list list-default">
 
           <li class="hotels-list-item">
 
@@ -130,8 +133,8 @@
                 От 4000 Р.
               </p>            
               <p class="hotel-actions">
-                <a class="button" href="hotel.html">Подробнее</a>
-                <a class="button" href="#">Забронировать</a>
+                <a class="button button-info" href="hotel.html">Подробнее</a>
+                <a class="button button-action" href="#">Забронировать</a>
               </p>
 
             </div>
@@ -165,8 +168,8 @@
                 От 3000 Р.
               </p>            
               <p class="hotel-actions">
-                <a class="button" href="hotel.html">Подробнее</a>
-                <a class="button" href="#">Забронировать</a>
+                <a class="button button-info" href="hotel.html">Подробнее</a>
+                <a class="button button-action" href="#">Забронировать</a>
               </p>
 
             </div>
@@ -200,8 +203,8 @@
                 От 2000 Р.
               </p>            
               <p class="hotel-actions">
-                <a class="button" href="hotel.html">Подробнее</a>
-                <a class="button" href="#">Забронировать</a>
+                <a class="button button-info" href="hotel.html">Подробнее</a>
+                <a class="button button-action" href="#">Забронировать</a>
               </p>
 
             </div>
@@ -230,16 +233,16 @@
         <a class="footer-tag-link">#Visitsedona</a>
       </p>        
       <div class="footer-social">     
-        <ul>
-          <li><a class="social-button social-button-twitter" href="#" aria-label="Твиттер">Твиттер</a></li>
-          <li><a class="social-button social-button-facebook" href="#" aria-label="Фейсбук">Фейсбук</a></li>
-          <li><a class="social-button social-button-youtube" href="#" aria-label="Ютуб">Ютуб</a></li>
+        <ul class="list-default">
+          <li class="social-button-twitter"><a class="social-button" href="#" aria-label="Твиттер"></a></li>
+          <li class="social-button-facebook"><a class="social-button" href="#" aria-label="Фейсбук"></a></li>
+          <li class="social-button-youtube"><a class="social-button" href="#" aria-label="Ютуб"></a></li>
         </ul>
       </div>
-      <div class="footer-copyright">
-        <b>Website by</b>
+      <div class="footer-copyright">       
         <p class="footer-logo">
-          <a href="https://htmlacademy.ru/intensive/htmlcss">            
+          <label>Website by</label> 
+          <a href="https://htmlacademy.ru/intensive/htmlcss">                       
             <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
           </a>          
         </p>
