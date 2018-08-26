@@ -465,4 +465,51 @@ a {
    flex-basis: 400px;   
 }
 
+.footer-main {
+    display: flex;
+    min-height: 120px;
+}
 
+.footer-main p {
+    margin: 0;
+}
+
+.footer-main > * {
+    flex-basis: 400px;  
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer-social {
+    /* outline: 1px dotted orange; */
+    display: flex;
+    justify-content: center;
+}
+
+.footer-copyright {
+    /* outline: 1px dotted orange; */
+    position: relative;
+}
+
+.list-social-buttons {
+    display: flex;
+}
+
+.list-social-buttons li {
+    margin: 0 5px 0 0;
+}
+
+.footer-logo img {
+    position: absolute;
+    left: 184px;
+    top: 40px;
+}
+
+.footer-logo label {
+    position: absolute;
+    left: 100px;
+    top: 46px;
+}
