@@ -23,6 +23,7 @@ a {
 .list-default  {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .header-logo {
@@ -465,6 +466,161 @@ a {
    flex-basis: 400px;   
 }
 
+.hotels-filter {
+    display: flex;
+    min-height: 256px;    
+    position: relative;
+}
+
+.hotels-filter fieldset {
+    margin: 0;
+    border: 0;
+    padding: 0; 
+    flex-basis: 300px;
+}
+
+.hotels-filter > div {
+    outline: 1px dotted blue;
+    flex-basis: 600px;
+    display: flex;
+}
+
+.filter-infrastructure::before{
+    content: "Инфраструктура:";
+    color: white;
+    font-weight: bold
+}
+
+.filter-type::before{
+    content: "Тип жилья:";
+    color: white;
+    font-weight: bold
+}
+
+.filter-price::before{
+    content: "Стоимость в сутки (р):";
+    color: white;
+    font-weight: bold
+}
+
+
+.filter-type,
+.filter-infrastructure {
+    outline: 1px dotted red;
+    min-height: 256px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+    align-items: baseline;
+    padding-left: 50px;
+}
+
+.hotels-list-header {
+    display: flex;
+    align-items: baseline;
+}
+
+.hotels-list-header > h3 {
+    flex-basis: 170px;
+    padding-left: 70px;
+}
+
+.hotel-search-menu {
+    display: flex;
+    align-items: baseline;
+    flex-basis: 360px;
+}
+
+.search-results-sort-type {
+    display: flex;
+}
+
+.search-results-sort-order {
+    display: flex;
+}
+
+.hotels-list {
+    display: flex;     
+    flex-wrap: wrap;  
+}
+
+.hotels-list-item {
+    display: flex;
+    flex-basis: 1200px;
+}
+
+.hotels-list-item img {
+    flex-basis: 135px;
+    padding-left: 72px;
+    padding-right: 30px;
+}
+
+.hotel-card {
+    flex-basis: 360px;
+}
+
+.hotel-rating-card {
+    flex-basis: 600px;
+}
+
+
+.hotel-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.hotels-list-item p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+
+
+.hotel-data {    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hotel-data p {
+    flex-basis: 180px;
+}
+
+.hotel-actions .button {
+    margin: 0;
+}
+
+.hotel-card {
+    flex-basis: 360px;
+}
+
+.hotel-rating-card {
+    flex-basis: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------- footer ------------------------------- */
 .footer-main {
     display: flex;
     min-height: 120px;

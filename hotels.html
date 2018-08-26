@@ -30,66 +30,71 @@
         <section class="hotels-filter-form">
           <h2 class="visually-hidden">Поиск гостиницы</h2>        
           <form class="hotels-filter" action="https://echo.htmlacademy.ru/" method="GET">
-            <fieldset>
-              <legend>Инфраструктура:</legend>
-              <ul class="filter-infrastructure list-default">
-                <li>                
-                  <label>
-                    Бассейн
-                    <input class="visually-hidden filter-checkbox" type="checkbox" id="cbpool" name="pool" checked>
-                  </label> 
-                </li>
-                <li>
-                  <label>
-                    Парковка
-                    <input class="visually-hidden filter-checkbox" type="checkbox" id="cbparking" name="parking">
-                  </label> 
-                </li>
-                <li>
-                  <label>
-                    Wi-Fi
-                    <input class="visually-hidden filter-checkbox" type="checkbox" id="cbwifi" name="wifi">
-                  </label> 
-                </li>
-              </ul>               
-            </fieldset>
-            <fieldset>
-              <legend>Тип жилья:</legend>
-              <ul class="filter-type list-default">
-                <li>
-                  <label>
-                    Гостиница
-                    <input class="visually-hidden filter-checkbox" type="checkbox" id="cbhotel" name="hotel" checked>
-                  </label> 
-                </li>
-                <li>
-                  <label>
-                    Мотель
-                    <input class="visually-hidden filter-checkbox" type="checkbox" id="cbmotel" name="motel" checked>
-                  </label> 
-                </li>
-                <li>
-                  <label>
-                    Апартаменты
-                    <input class="visually-hidden filter-checkbox" type="checkbox" id="cbapartments" name="apartments" checked>
-                  </label> 
-                </li>
-              </ul>               
-            </fieldset>
-            <fieldset>
-              <legend>Стоимость в сутки (р):</legend>
-              <ul class="filter-price list-default">
-                <li>
-                  <label for="pricemin">От</label> 
-                  <input class="visually-hidden filter-bound" type="text" id="pricemin" name="pricemin" value="0">                
-                </li>
-                <li>
-                  <label for="pricemax">До</label> 
-                  <input class="visually-hidden filter-bound" type="text" id="pricemax" name="pricemax" value="3000">                
-                </li>
-              </ul>            
-            </fieldset>
-            <button class="button" type="submit">Показать</button>
+            <div class="filter-options">
+              <fieldset>
+                <legend>Инфраструктура:</legend>
+                <ul class="filter-infrastructure list-default">
+                  <li>                
+                    <label>
+                      Бассейн
+                      <input class="visually-hidden filter-checkbox" type="checkbox" id="cbpool" name="pool" checked>
+                    </label> 
+                  </li>
+                  <li>
+                    <label>
+                      Парковка
+                      <input class="visually-hidden filter-checkbox" type="checkbox" id="cbparking" name="parking">
+                    </label> 
+                  </li>
+                  <li>
+                    <label>
+                      Wi-Fi
+                      <input class="visually-hidden filter-checkbox" type="checkbox" id="cbwifi" name="wifi">
+                    </label> 
+                  </li>
+                </ul>               
+              </fieldset>         
+              <fieldset>
+                <legend>Тип жилья:</legend>
+                <ul class="filter-type list-default">
+                  <li>
+                    <label>
+                      Гостиница
+                      <input class="visually-hidden filter-checkbox" type="checkbox" id="cbhotel" name="hotel" checked>
+                    </label> 
+                  </li>
+                  <li>
+                    <label>
+                      Мотель
+                      <input class="visually-hidden filter-checkbox" type="checkbox" id="cbmotel" name="motel" checked>
+                    </label> 
+                  </li>
+                  <li>
+                    <label>
+                      Апартаменты
+                      <input class="visually-hidden filter-checkbox" type="checkbox" id="cbapartments" name="apartments" checked>
+                    </label> 
+                  </li>
+                </ul>               
+              </fieldset>
+            </div>
+            <div class="filter-price">
+              <fieldset>
+                <legend>Стоимость в сутки (р):</legend>
+                <ul class="filter-price list-default">
+                  <li>
+                    <label for="pricemin">От</label> 
+                    <input class="visually-hidden filter-bound" type="text" id="pricemin" name="pricemin" value="0">                
+                  </li>
+                  <li>
+                    <label for="pricemax">До</label> 
+                    <input class="visually-hidden filter-bound" type="text" id="pricemax" name="pricemax" value="3000">                
+                  </li>
+                </ul>                        
+              </fieldset>
+              <button class="button" type="submit">Показать</button>  
+            </div>
+            
           </form>
           
         </section>
@@ -101,16 +106,18 @@
 
             <h3><b>Найдено: </b><span class="search-results-count">3</span></h3>
             
-            <p class="search-results-sort-header">Сортировка:</p>
-            <ul class="search-results-sort-type list-default">
-              <li><a class="button button-link" href="hotels.html?sort=price">По цене</a></li>
-              <li><a class="button button-link" href="hotels.html?sort=type">По типу</a></li>
-              <li><a class="button button-link" href="hotels.html?sort=rating">По рейтингу</a></li>
-            </ul>
+            <div class="hotel-search-menu">
+              <p class="search-results-sort-header">Сортировка:</p>
+              <ul class="search-results-sort-type list-default">
+                <li><a class="button button-link" href="hotels.html?sort=price">По цене</a></li>
+                <li><a class="button button-link" href="hotels.html?sort=type">По типу</a></li>
+                <li><a class="button button-link" href="hotels.html?sort=rating">По рейтингу</a></li>
+              </ul>
+            </div>
 
             <ul class="search-results-sort-order list-default">
-              <li><a class="button button-sort button-sort-asc" href="hotels.html?order=asc" aria-label="От меньшего к большему"></a></li>
-              <li><a class="button button-sort button-sort-desc" href="hotels.html?order=desc" aria-label="Oт большего к меньшему"></a></li>          
+              <li><a class="button button-sort button-sort-asc" href="hotels.html?order=asc" aria-label="По возрастанию">По возрастанию</a></li>
+              <li><a class="button button-sort button-sort-desc" href="hotels.html?order=desc" aria-label="По убыванию">По убыванию</a></li>          
             </ul>
 
           </div>
@@ -125,13 +132,15 @@
             
                 <h3 class="hotel-name">
                   AMARA RESORT & SPA
-                </h3>                    
-                <p class="hotel-category">
-                  Гостиница
-                </p>                    
-                <p class="hotel-price">
-                  От 4000 Р.
-                </p>            
+                </h3>     
+                <div class="hotel-data">
+                  <p class="hotel-category">
+                    Гостиница
+                  </p>                    
+                  <p class="hotel-price">
+                    От 4000 Р.
+                  </p>    
+                <div>        
                 <p class="hotel-actions">
                   <a class="button button-info" href="hotel.html">Подробнее</a>
                   <a class="button button-action" href="#">Забронировать</a>
