@@ -31,7 +31,7 @@
           <h2 class="visually-hidden">Поиск гостиницы</h2>        
           <form class="hotels-filter" action="https://echo.htmlacademy.ru/" method="GET">
             <div class="filter-options">
-              <fieldset>
+              <fieldset class="filter-options-fieldset">
                 <legend>Инфраструктура:</legend>
                 <ul class="filter-infrastructure list-default">
                   <li>                
@@ -54,7 +54,7 @@
                   </li>
                 </ul>               
               </fieldset>         
-              <fieldset>
+              <fieldset  class="filter-options-fieldset">
                 <legend>Тип жилья:</legend>
                 <ul class="filter-type list-default">
                   <li>
@@ -78,8 +78,8 @@
                 </ul>               
               </fieldset>
             </div>
-            <div class="filter-price">
-              <fieldset>
+            <div class="filter-price-options">
+              <fieldset class="filter-price-fieldset">
                 <legend>Стоимость в сутки (р):</legend>
                 <ul class="filter-price list-default">
                   <li>
@@ -90,9 +90,9 @@
                     <label for="pricemax">До</label> 
                     <input class="visually-hidden filter-bound" type="text" id="pricemax" name="pricemax" value="3000">                
                   </li>
-                </ul>                        
-              </fieldset>
-              <button class="button" type="submit">Показать</button>  
+                </ul>           
+              </fieldset>             
+              <button class="button" type="submit">Показать</button>
             </div>
             
           </form>
