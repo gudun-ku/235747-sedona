@@ -47,15 +47,31 @@ a {
 .button-link {    
     font-weight: 400;
     color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px dotted  #81b3d2; 
+}
+
+.button-link-price{
+    width: 75px;
+}
+
+.button-link-type {
+    width: 51px;
 }
 
 .button-link:hover,
 .button-link:focus {
     color: #81b3d2;
+    
 }
 
 .button-link:active {  
     color: black;
+    border: none;
+}
+
+.button-link.active {  
+    color: #81b3d2;
+    border: none;
 }
 
 .button-sort {
@@ -320,6 +336,50 @@ a {
 
 .hotel-name:active{  
     color: rgba(0, 0, 0, 0.3);
+}
+
+a.button-sort {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 0
+}
+
+
+
+.button-sort::before {
+    content: "";
+    border: 10px solid #cacaca;
+    border-right-width: 5px;
+    border-left-width: 5px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+.button-sort.active::before {
+    content: "";
+    border: 10px solid #81b3d2;
+    border-right-width: 5px;
+    border-left-width: 5px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+.button-sort-asc::before {
+    position: relative;
+    top: -10px;
+    border-top: 0;    
+}
+
+.button-sort-asc.active::before {
+    position: relative;
+    top: -10px;
+    border-top: 0;    
+}
+
+.button-sort-desc::before {
+    position: relative;
+    top: 0;
+    border-bottom: 0;
 }
 
 .info-item-card {
@@ -620,7 +680,7 @@ a {
     display: inline-block;
 }
 
-.search-results-sort-type .button-link {    
+.search-results-sort-type li {    
     display: inline-block;    
     width: 80px;
 }
