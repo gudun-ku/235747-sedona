@@ -307,6 +307,7 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;  
     background-size:  1200px 800px;   
     background-position: 50% 50%;
+    margin-bottom: 10px;
 }
 
 .hotels-filter-form legend {
@@ -356,7 +357,7 @@ input[type="radio"].visually-hidden {
 
 .search-results-sort-order a.button-sort {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 6px 0 4px;
     font-size: 0
 }
 
@@ -519,10 +520,10 @@ input[type="radio"].visually-hidden {
 
 .preference {
     width: 400px;     
-    height: 256px;      
+    height: 256px;         
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;     
 }
 
@@ -531,15 +532,17 @@ input[type="radio"].visually-hidden {
 }
 
 .preference .preference-item-header {    
-    margin: 0;
-    padding: 0;
+    margin: 0;    
+    padding: 0;   
+    margin-top: 48px;
     text-align: center;   
     line-height: 21px;
     width: 160px;
 }
 
 .preference .preference-item-number {    
-    margin: 30px 0;
+    margin: 0;
+    margin-top: 24px;
     padding: 0;
     text-align: center;
     line-height: 21px;
@@ -549,11 +552,16 @@ input[type="radio"].visually-hidden {
 .preference .preference-item-description {    
     margin: 0;
     padding: 0;
+    margin-top: 20px;
     text-align: center;
     line-height: 21px;
     vertical-align: top;
     max-height: 32px; 
     width: 280px;  
+}
+
+.preference-item-card:nth-child(2) .preference-item-description {      
+    width: 320px; 
 }
 
 .preference-item-card:last-child .preference-item-description {      
@@ -629,17 +637,22 @@ input[type="radio"].visually-hidden {
  /* ----------------------------------------------- HOTELS hotels.html -------------------------------- */
 
 .hotels-filter-form {    
-    display: flex;
-    min-height: 256px;
-    flex-direction: column;
-    justify-content: flex-end;
+    padding-top:56px;            
+    min-height: 217px;    
 }
+
 
 .hotels-filter {
-    display: flex;
-    flex-basis: 200px;        
+    display: flex;   
+    flex-wrap: nowrap;           
 }
 
+.hotels-filter .filter-options {
+    flex-basis: 600px;
+    display: flex;
+    
+}
+/*
 .filter-fieldset {
    display: inline;
 }
@@ -678,10 +691,12 @@ input[type="radio"].visually-hidden {
     align-self: center;
 }
 
+*/
 .hotels-list-header {
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
+    margin-bottom: 10px;
 }
 
 .hotels-list-header > h3 {  
@@ -691,8 +706,8 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-list-header li {
-    font-size: 10.5px;
-    line-height: 17.5px;
+    font-size: 11px;
+    line-height: 18px;
 }
 
 .hotel-search-menu {   
@@ -704,6 +719,11 @@ input[type="radio"].visually-hidden {
 .hotel-search-menu p {   
    flex-basis: 110px;
    margin-right: 6px;
+}
+
+.search-results-sort-header {
+    font-size: 11px;
+    line-height: 18px;
 }
 
 .search-results-sort-type {  
@@ -775,8 +795,8 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel-card h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin: 0;
+    margin-top: -5px;
 }
 
 .hotels-list-item p {
@@ -787,12 +807,18 @@ input[type="radio"].visually-hidden {
 .hotel-data,
 .hotel-actions {    
     display: flex;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;       
     justify-content: flex-start;    
 }
 
-.hotel-data p, 
-.hotel-actions .button {    
+.hotel-data p {
+    flex-basis: 110px;
+    margin-right: 6px;
+    margin-top: -5px;
+}
+
+
+.hotel-actions .button {      
     margin: 0;
     margin-right: 6px;
 }
@@ -817,6 +843,22 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
     align-items: flex-end;  
 }
+
+.hotel-rating-card .hotel-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.hotel-rating-card .hotel-star-item {
+    width: 17px;
+    height: 18px;
+    margin-left: 6px;
+    background-image: url("../img/elements/star.svg");
+} 
+
 
 /* ------------------------------------------------ FOOTER ---------------------------------------------*/
 
