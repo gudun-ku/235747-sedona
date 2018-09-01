@@ -84,15 +84,24 @@
                 <ul class="filter-price list-default">
                   <li>
                     <label for="pricemin">От</label> 
-                    <input class="visually-hidden filter-bound" type="text" id="pricemin" name="pricemin" value="0">                
+                    <input class="filter-bound pricemin" type="text" id="pricemin" name="pricemin" value="0" autocomplete="off">                
                   </li>
                   <li>
                     <label for="pricemax">До</label> 
-                    <input class="visually-hidden filter-bound" type="text" id="pricemax" name="pricemax" value="3000">                
+                    <input class="filter-bound pricemax" type="text" id="pricemax" name="pricemax" value="3000" autocomplete="off">                
                   </li>
-                </ul>           
-              </fieldset>             
-              <button class="button" type="submit">Показать</button>
+                </ul>       
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                </div>    
+              </fieldset>    
+              <div class="form-controls">
+                <button class="button btn-transparent" type="submit">Показать</button>
+              </div>         
             </div>
             
           </form>
