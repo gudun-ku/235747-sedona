@@ -322,14 +322,22 @@ input[type="radio"].visually-hidden {
     margin-left: 30px;
 }
 
-.filter-infrastructure li  {
-    background-image: url("../img/elements/checkbox-off.svg");  
+.filter-checkbox + label::before {   
+    content: "\00a0";
+    display: inline-block;
+    width: 27px;
+    height: 23px;    
+    margin: 0 15px 0 0;
+    padding: 0;
+    vertical-align: top;  
+    background-image: url("../img/elements/checkbox-off.svg");
+    background-color: none;
     background-repeat: no-repeat;  
 }
 
-.filter-type li  {
-    background-image: url("../img/elements/checkbox-on.svg");  
-    background-repeat: no-repeat;  
+.filter-checkbox:checked + label:before {
+    text-align: center;
+    background-image: url("../img/elements/checkbox-on.svg") ;
 }
 
 .hotels-list-header h3 {
@@ -648,10 +656,44 @@ input[type="radio"].visually-hidden {
     flex-wrap: wrap;           
 }
 
+
+.hotels-filter .filter-options::before {
+    content: " ";
+    flex-basis: 42px;
+}
+
+
 .hotels-filter .filter-options {
     flex-basis: 600px;
     display: flex;
+    justify-content: flex-start;
+    padding-top:18px;   
     
+}
+
+.hotels-filter .filter-options-fieldset {
+    border: none;    
+    flex-basis: 256px;   
+    padding: 0;
+    margin: 0;
+}
+
+.filter-options-fieldset legend {
+    padding-top: 5px;
+    padding-left: 30px;
+    margin-bottom: 22px;
+    
+}
+
+.filter-options-fieldset ul {    
+    display: flex;
+    min-height: 120px;    
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.filter-options-fieldset li {    
+   margin-bottom: 20px;
 }
 
 .hotels-filter .filter-price-options {
@@ -674,8 +716,9 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-price-fieldset legend{
-    border: 0;    
-    margin-bottom: 9px;
+    border: 0;        
+    margin-bottom: 4px;
+    padding-top: 5px;
     font-weight: 600;
     font-size: 16px;
     line-height: 21px;
@@ -683,6 +726,7 @@ input[type="radio"].visually-hidden {
 
 .filter-price {
     height: 34px;
+    margin-top: 0;
     margin-bottom: 20px;
     border: 2px solid #ffffff;
     border-radius: 2px;
