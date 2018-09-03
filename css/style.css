@@ -220,6 +220,9 @@ input[type="radio"].visually-hidden {
  }
 
 .icon-souvenirs {
+    position: relative;
+    top: -5px;
+    left: 5px;
     background-image: url("../img/elements/icon-3.svg");
 }
 
@@ -365,10 +368,9 @@ input[type="radio"].visually-hidden {
 
 .search-results-sort-order a.button-sort {
     display: inline-block;
-    margin: 0 6px 0 4px;
+    margin: 0 4px 0 6px;
     font-size: 0
 }
-
 
 .search-results-sort-order .button-sort::before {
     content: "";
@@ -383,7 +385,7 @@ input[type="radio"].visually-hidden {
 .search-results-sort-order .button-sort-asc::before {
     position: relative;
     top: 0;
-    border-bottom: 10px;    
+    border-bottom: 11px;    
 }
 
 .search-results-sort-order .button-sort-desc::before {
@@ -446,6 +448,8 @@ input[type="radio"].visually-hidden {
     margin-left: auto;
     margin-right: auto;
     background-color: white;
+
+    box-shadow: 0 10px 30px 0 rgba(50, 50, 50, .3);
 }
 
 .header-main {    
@@ -474,14 +478,40 @@ input[type="radio"].visually-hidden {
     align-items: center;    
 }
 
-.nav-link {   
-    width: 240px;     
-    text-align: center;      
+.nav-link {
+    width: 168px;
+    padding-left: 72px;   
 }
 
 .nav-link:nth-child(2)
 {
     margin-right: 240px;    
+}
+
+.nav-link:nth-child(3)
+ {
+    width: 164px;     
+    text-align: right;
+    padding-left: 0; 
+    padding-right: 76px;            
+}
+
+.nav-link:nth-child(3) a {
+    display:inline-block;
+    margin-left: -2px;
+    -webkit-transform:scale(1.05,1); /* Safari */
+    -moz-transform:scale(1.05,1); /* Firefox */
+    -ms-transform:scale(1.05,1); /* IE 9+ */
+    -o-transform:scale(1.05,1); /* Opera */
+    transform:scale(1.05,1); /* W3C */
+}
+
+.nav-link:nth-child(4)
+ {
+    width: 168px;     
+    text-align: right;
+    padding-left: 0; 
+    padding-right: 72px;            
 }
 
 .page-title {
@@ -576,6 +606,10 @@ input[type="radio"].visually-hidden {
     width: 250px; 
 }
 
+.preference-item-card:last-child .preference-item-header {      
+    width: 140px; 
+}
+
 .info-item-list {     
     background-color: white; 
     min-height: 330px;    
@@ -640,7 +674,7 @@ input[type="radio"].visually-hidden {
     margin: 0;    
     padding: 0;
     margin-bottom: 25px;
- }
+}
 
  /* ----------------------------------------------- HOTELS hotels.html -------------------------------- */
 
@@ -706,7 +740,7 @@ input[type="radio"].visually-hidden {
 
 .hotels-filter .filter-price-fieldset {
     border: 0;    
-    width: 320px;
+    width: 318px;
     margin: 0;
     margin-top: 22px;
     margin-right: 60px;    
@@ -757,7 +791,7 @@ input[type="radio"].visually-hidden {
     line-height: 34px;
     vertical-align: top;
     cursor: pointer;
-    padding-left: 35px;
+    padding-left: 32px;
 }
 
 .filter-price .pricemin,
@@ -830,7 +864,7 @@ input[type="radio"].visually-hidden {
 
 .btn-transparent {
     display: block;
-    margin: 0 82px;      
+    margin: 0 74px;      
 
     padding: 6px 35px;
   
@@ -854,7 +888,7 @@ input[type="radio"].visually-hidden {
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .hotels-list-header > h3 {  
@@ -894,7 +928,7 @@ input[type="radio"].visually-hidden {
 
 .search-results-sort-type li {    
     display: inline-block;    
-    width: 80px;
+    width: 78px;
 }
 
 .search-results-sort-order {        
@@ -937,7 +971,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-list-item .button-action {    
-    width: 140px;  
+    width: 142px;  
     min-height: 27px;
     text-align: center;
 }
@@ -985,10 +1019,11 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel-rating {
-    width: 110px;
+    width: 100px;
     min-height: 27px;
     margin-bottom: 0;
-    text-align: center;    
+    text-align: right;    
+    padding-right: 10px;
 }
 
 .hotel-rating-card {
@@ -1061,7 +1096,7 @@ input[type="radio"].visually-hidden {
 .footer-logo label {
     position: absolute;
     left: 100px;
-    top: 46px;
+    top: 48px;
 }
 
 .footer-logo:hover path,
@@ -1072,3 +1107,14 @@ input[type="radio"].visually-hidden {
 .footer-logo:active path {
     fill: #bdbbbc;
 }
+
+.white_back {
+    background-image: url("white back.png");
+    position: absolute;
+    left: 26px;
+    top: -9px;
+    width: 1229px;
+    height: 2791px;
+    z-index: 2;
+  }
+  
