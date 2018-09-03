@@ -331,7 +331,7 @@ input[type="radio"].visually-hidden {
     padding: 0;
     vertical-align: top;  
     background-image: url("../img/elements/checkbox-off.svg");
-    background-color: none;
+    background-color: transparent;
     background-repeat: no-repeat;  
 }
 
@@ -830,7 +830,7 @@ input[type="radio"].visually-hidden {
 
 .btn-transparent {
     display: block;
-    margin: 0 75px;      
+    margin: 0 82px;      
 
     padding: 6px 35px;
   
@@ -975,12 +975,10 @@ input[type="radio"].visually-hidden {
     margin-top: -5px;
 }
 
-
 .hotel-actions .button {      
     margin: 0;
     margin-right: 6px;
 }
-
 
 .hotel-card {
     flex-basis: 360px;
