@@ -1100,7 +1100,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-logo:hover path,
-.footre-logo:focus path {
+.footer-logo:focus path {
     fill: #81b3d2;
 }
 
@@ -1108,13 +1108,214 @@ input[type="radio"].visually-hidden {
     fill: #bdbbbc;
 }
 
-.white_back {
-    background-image: url("white back.png");
+/* ------------------------------------------ Модальная форма ---------------------------------------------*/
+
+.modal-hotel-search {
+    width: 568px;
+    height: 481px;
     position: absolute;
-    left: 26px;
-    top: -9px;
-    width: 1229px;
-    height: 2791px;
-    z-index: 2;
-  }
+    left: 316px;
+    bottom: 198px;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-hotel-search h2 {
+    margin: 0;
+    padding: 0;
+    width: 568px;
+    padding-top: 30px;
+    height: 56px;
+    text-align: center;
+}
+
+.modal-hotel-search .hotelsearch {
+    width:458px;
+    height: 370px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-left: 55px;    
+    padding-right: 55px;
+}
+
+.hotelsearch p {
+    margin: 0;
+}
+
+.hotelsearch input {
+    box-sizing: border-box;      
+    padding: 0;     
+    border: 0;
+    outline: none;
+    height: 38px; 
+}
+
+.hotelsearch input:hover {
+    background-color: #ebebeb;
+}
+
+.hotelsearch input:focus {
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 0 0 2px #e5e5e5;
+          box-shadow: inset 0 0 0 2px #e5e5e5;
+}
+
+.hotelsearch .dateinput {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+}
+
+.dateinput input {
+    width: 346px;
+    height: 38px; 
+    padding: 0;   
+    padding-left: 15px;
+    border: 0;
+    outline: none;
+}
+
+.dateinput label {
+    display:inline-block;
+    flex-basis: 112px;
+    padding-top: 7px;
+}
+
+.dateinput .icon-button {    
+    position: absolute;
+    top: 0;
+    left: 420px;
+    height: 38px;
+    width: 38px;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;   
+    cursor: pointer;
+}   
+
+.dateinput .icon-calendar {
+    position: absolute;
+    top: 8px;
+    left: 428px;
+}
+
+.icon-calendar path {
+    fill: #cacaca;
+}
+
+.icon-calendar:hover {
+    cursor: pointer;
+}
+
+.icon-calendar:hover path {
+    fill: #000;    
+}
+
+.icon-calendar:focus path,
+.icon-calendar:active path {
+    fill: #81b3d2;
+    
+}
+
+.hotelsearch .people {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;    
+}
+
+.hotelsearch .quantinput  {
+   flex-basis: 229px;
+   display: flex;
+}
+
+.quantinput label {
+    display:inline-block;
+    width: 112px;
+    padding-top: 7px;
+}
+
+.quantinput:last-child label {
+    padding-left: 50px;
+    width: 62px;
+}
+
+.quantinput input {
+    width: 39px;
+    height: 38px; 
+    padding: 0;   
+    padding-left: 15px;
+    border: 0;
+    outline: none;
+}
+
+.quantinput .icon-button {   
+    position: relative;
+    display: block;
+    width: 39px;
+    height: 38px;
+    background-color: #f2f2f2;
+    border: 0;  
+    font-size: 0;
+ 
+    border: none;
+    outline: none;   
+    cursor: pointer;
+}   
   
+.count-up-button::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 13px;
+    width: 11px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: #a9a9a9;
+}
+  
+.count-up-button::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 17px;
+    width: 3px;
+    height: 11px;
+    border-radius: 1px;
+    background-color: #a9a9a9;
+}
+  
+.count-down-button::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 13px;
+    width: 12px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: #a9a9a9;
+}
+  
+.quantinput .icon-button:hover::before,
+.quantinput .icon-button:hover::after,
+.quantinput .icon-button:focus::before,
+.quantinput .icon-button:focus::after {
+    background-color: #000;
+}
+
+.quantinput .icon-button:active::before,
+.quantinput .icon-button:active::after {
+    background-color: #81b3d2;
+}
+
+.hotelsearch .button-info {
+    margin-top: 52px;
+    width: 100%;
+    height: 58px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+}
