@@ -44,6 +44,8 @@ searchFormButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   searchForm.classList.toggle("modal-hidden");    
   searchForm.classList.toggle("modal-show");
+  mapBlock.classList.toggle("map-back");
+
   if (!modalFormHidden) {      
     dateArrival.focus();
 
@@ -87,11 +89,6 @@ searchForm.addEventListener("submit",function(evt){
       validationErrors = true;
     }
 
-    if (!numChildren.value) {     
-      numChildren.classList.add("validate-error");      
-      validationErrors = true;
-    }
-
     if (isStorageSupported) {    
       if (dateArrival.value) {   
         localStorage.setItem("dateArrival", dateArrival.value);
@@ -122,25 +119,88 @@ searchForm.addEventListener("submit",function(evt){
 );
 
 // очистка ошибок валидации
-
 dateArrival.addEventListener("focus",function(){  
-  dateArrival.classList.remove("validate-error");
-}
+    dateArrival.classList.remove("validate-error");
+  }
 );
 
 dateDeparture.addEventListener("focus",function(){  
-  dateDeparture.classList.remove("validate-error");
-}
+    dateDeparture.classList.remove("validate-error");
+  }
 );
 
 numAdults.addEventListener("focus",function(){  
-  numAdults.classList.remove("validate-error");
-}
-);
-
-numAdults.addEventListener("focus",function(){  
-  numAdults.classList.remove("validate-error");
-}
+    numAdults.classList.remove("validate-error");
+  }
 );
 
 
+// работа с картой Open Map
+var mousePositionControl = new ol.control.MousePosition( {
+  // используется градусная проекция
+  projection: 'EPSG:4326',
+  // переопределяем функцию вывода координат
+  coordinateFormat: function(coordinate) {
+      // сначала широта, потом долгота и ограничиваем до 4 знаков после запятой
+      return ol.coordinate.format(coordinate, '{y}, {x}', 4);
+  }
+} );
+
+var zoomSliderControl = new ol.control.ZoomSlider ( {
+  minResolution: 1000,
+  maxResolution: 25000
+  }
+);
+
+var map = new ol.Map({
+    controls: ol.control.defaults().extend([
+      zoomSliderControl,
+      mousePositionControl,
+      new ol.control.OverviewMap(),
+      new ol.control.ScaleLine()
+  ]),
+  target: 'map-sedona'
+});
+
+// слой плитки с OpenMap
+var osmLayer = new ol.layer.Tile({
+  source: new ol.source.OSM()
+});
+
+map.addLayer(osmLayer);
+
+var markerSource = new ol.source.Vector();
+var markerStyle = new ol.style.Style({
+  image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+    anchor: [0.5, 38],
+    anchorXUnits: 'fraction',
+    anchorYUnits: 'pixels',
+    opacity: 0.75,
+    src: '../img/elements/red_pin.png'
+  }))
+});
+
+var iconFeature = new ol.Feature({
+  geometry: new ol.geom.Point(
+    ol.proj.fromLonLat([-111.7765 , 34.8635])),
+    name: 'Седона'
+});
+
+markerSource.addFeature(iconFeature);
+
+// добавляем маркер
+var markerVectorLayer = new ol.layer.Vector({
+  source: markerSource,
+  style: markerStyle
+});
+map.addLayer(markerVectorLayer);
+
+
+var view =  new ol.View({
+  center: ol.proj.fromLonLat([-111.7565 , 34.7475]),
+  zoom:9,
+  minZoom:4,
+  maxZoom:16
+});
+
+map.setView(view);
