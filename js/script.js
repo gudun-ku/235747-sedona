@@ -176,7 +176,7 @@ var markerStyle = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     opacity: 0.75,
-    src: '../img/elements/red_pin.png'
+    src: 'img/elements/red_pin.png'
   }))
 });
 
