@@ -157,10 +157,10 @@ input[type="radio"].visually-hidden {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.banner-main {    
-      
+.banner-main {          
     width: 1200px;
-    height: 565px;      
+    height: 565px;
+    background-color: #DDECF3;      
     background-image:url("../img/welcome.svg"),
                      url("../img/banner-mask.svg"),
                      url("../img/banner-background.jpg");
@@ -197,6 +197,7 @@ input[type="radio"].visually-hidden {
     height: 256px; 
     background-size: 800px 400px;
     background-position: 50% 50%;
+    background-color: #E5C9BE;
 }
 
 .pref-image-town {
@@ -314,7 +315,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-filter-form {    
-    background-color:#8EB3D0;
+    background-color:#497497;
     background-image: url("../img/hotels/filter-background.jpg");  
     background-repeat: no-repeat;  
     background-size:  1200px 800px;   
