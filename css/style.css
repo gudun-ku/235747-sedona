@@ -698,15 +698,15 @@ input[type="radio"].visually-hidden {
 }
 
 .item-home .info-item-description {      
-    width: 252px;       
+    width: 256px;       
 }
 
 .item-food .info-item-description {    
-    width: 284px;   
+    width: 294px;   
 }
 
 .item-souvenirs .info-item-description {  
-    width: 273px;   
+    width: 276px;   
 }
 
 .visiting-header {
