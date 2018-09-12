@@ -1015,11 +1015,10 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel-search-menu p {   
+    margin-right: 6px;
     padding-top: 0;
-   -ms-flex-preferred-size: 110px;   
+    -ms-flex-preferred-size: 110px;   
        flex-basis: 110px;
-   margin-right: 6px;
-   
 }
 
 .search-results-sort-header {
@@ -1043,6 +1042,18 @@ input[type="radio"].visually-hidden {
     width: 78px;
     vertical-align: middle;
     padding-bottom: 0;
+}
+
+.search-results-sort-header {    
+    -webkit-transform:scale(1.1,1) translateX(3px);  
+    -ms-transform:scale(1.1,1) translateX(3px);  
+        transform:scale(1.1,1) translateX(3px); 
+}
+
+.search-results-sort-type li {    
+    -webkit-transform:scale(1.1,1) translateX(3px);  
+    -ms-transform:scale(1.1,1) translateX(3px);  
+        transform:scale(1.1,1) translateX(3px); 
 }
 
 .search-results-sort-order {        
@@ -1212,7 +1223,6 @@ input[type="radio"].visually-hidden {
     margin-left: 6px;
     background-image: url("../img/elements/star.svg");
 } 
-
 
 /* ------------------------------------------------ FOOTER ---------------------------------------------*/
 
@@ -1673,9 +1683,6 @@ input[type="radio"].visually-hidden {
 	-webkit-animation-timing-function: step-end;		
 	        animation-timing-function: step-end;	
 }
-
-
-  
 
 /* ----------------------------------------- Карта ----------------------------------------------- */
 .map {    
