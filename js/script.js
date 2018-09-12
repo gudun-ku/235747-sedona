@@ -41,9 +41,9 @@ if (!modalFormHidden) {
 
 searchFormButton.addEventListener("click", function (evt) {
 
-  evt.preventDefault();
+  evt.preventDefault();  
   searchForm.classList.toggle("modal-hidden");    
-  searchForm.classList.toggle("modal-show");
+  searchForm.classList.add("modal-show");
   mapBlock.classList.toggle("map-back");
 
   if (!modalFormHidden) {      
@@ -71,6 +71,7 @@ searchFormButton.addEventListener("click", function (evt) {
 });
 
 searchForm.addEventListener("submit",function(evt){
+
     var validationErrors = false;
     
     // проверяем заполнение полей, если что маркируем классом validate-error
@@ -106,7 +107,8 @@ searchForm.addEventListener("submit",function(evt){
 
     // если были ошибки, возврат
     if (validationErrors) {
-      evt.preventDefault();
+      evt.preventDefault();      
+      searchForm.classList.add("modal-error");
       return;
     }   
 
@@ -118,21 +120,36 @@ searchForm.addEventListener("submit",function(evt){
   }
 );
 
+
 // очистка ошибок валидации
 dateArrival.addEventListener("focus",function(){  
-    dateArrival.classList.remove("validate-error");
+    dateArrival.classList.remove("validate-error");   
   }
 );
 
 dateDeparture.addEventListener("focus",function(){  
-    dateDeparture.classList.remove("validate-error");
+    dateDeparture.classList.remove("validate-error");    
   }
 );
 
 numAdults.addEventListener("focus",function(){  
-    numAdults.classList.remove("validate-error");
+    numAdults.classList.remove("validate-error");    
   }
 );
+
+// для отлова событий анимации
+var pfx = ["webkit", "moz", "MS", "o", ""];
+function PrefixedEvent(element, type, callback) {
+    for (var p = 0; p < pfx.length; p++) {
+        if (!pfx[p]) type = type.toLowerCase();
+        element.addEventListener(pfx[p] + type, callback, false);
+    }
+}
+
+PrefixedEvent(searchForm, "AnimationEnd", function() {
+  searchForm.classList.remove("modal-error");
+  searchForm.classList.remove("modal-show");
+});
 
 
 // работа с картой Open Map
@@ -176,7 +193,7 @@ var markerStyle = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     opacity: 0.75,
-    src: 'img/elements/red_pin.png'
+    src: 'img/elements/red-pin.png'
   }))
 });
 
@@ -195,7 +212,7 @@ var markerVectorLayer = new ol.layer.Vector({
 });
 map.addLayer(markerVectorLayer);
 
-
+// создаем вью и выводим карту
 var view =  new ol.View({
   center: ol.proj.fromLonLat([-111.7565 , 34.7475]),
   zoom:9,
