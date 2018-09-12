@@ -71,6 +71,7 @@ searchFormButton.addEventListener("click", function (evt) {
 });
 
 searchForm.addEventListener("submit",function(evt){
+
     var validationErrors = false;
     
     // проверяем заполнение полей, если что маркируем классом validate-error
@@ -118,7 +119,6 @@ searchForm.addEventListener("submit",function(evt){
 
   }
 );
-
 
 
 // очистка ошибок валидации
@@ -212,7 +212,7 @@ var markerVectorLayer = new ol.layer.Vector({
 });
 map.addLayer(markerVectorLayer);
 
-
+// создаем вью и выводим карту
 var view =  new ol.View({
   center: ol.proj.fromLonLat([-111.7565 , 34.7475]),
   zoom:9,
